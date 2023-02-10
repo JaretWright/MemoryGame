@@ -1,5 +1,7 @@
 package com.example.memorygame;
 
+import javafx.scene.image.Image;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -79,4 +81,12 @@ public class Card {
         return getValidFaceNames().indexOf(faceName) + 2;
     }
 
+    /**
+     * This method will return an Image that represents the Card
+     */
+    public Image getImage()
+    {
+        String pathName = "images/"+faceName+"_of_"+suit+".png";
+        return new Image(Card.class.getResourceAsStream(pathName));
+    }
 }

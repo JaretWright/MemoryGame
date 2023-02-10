@@ -18,9 +18,9 @@
    <children>
       <VBox layoutX="413.0" layoutY="139.0" prefHeight="650.0" prefWidth="1000.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <FlowPane alignment="CENTER" hgap="20.0" vgap="20.0">
+            <FlowPane fx:id="imagesFlowPane" alignment="CENTER" hgap="20.0" vgap="20.0">
                <children>
-                  <ImageView fitHeight="300.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imageView" fitHeight="300.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/3_of_hearts.png" />
                      </image>
@@ -86,11 +86,11 @@
                      <children>
                         <Label text="Guesses:" />
                         <Label text="Correct:" GridPane.rowIndex="1" />
-                        <Label text="0" GridPane.columnIndex="1" />
-                        <Label text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="guessLabel" text="0" GridPane.columnIndex="1" />
+                        <Label fx:id="correctGuessesLabel" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
-                  <Button mnemonicParsing="false" text="Play Again" />
+                  <Button mnemonicParsing="false" onAction="#playAgain" text="Play Again" />
                </children>
             </HBox>
          </children>
