@@ -20,9 +20,6 @@ public class MemoryGameController implements Initializable {
     private Label guessLabel;
 
     @FXML
-    private ImageView imageView;
-
-    @FXML
     private FlowPane imagesFlowPane;
 
     @FXML
@@ -32,8 +29,25 @@ public class MemoryGameController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        DeckOfCards deck = new DeckOfCards();
-        deck.shuffle();
-        imageView.setImage(deck.dealTopCard().getImage());
+        initializeImageView();
+    }
+
+    /**
+     * This will add a number to each ImageView and set the image to be the back of a Card
+     */
+    private void initializeImageView()
+    {
+        for (int i=0; i<imagesFlowPane.getChildren().size();i++)
+        {
+            //"cast" the Node to be of type ImageView
+            ImageView imageView = (ImageView) imagesFlowPane.getChildren().get(i);
+            imageView.setImage(new Image(Card.class.getResourceAsStream("images/back_of_card.png")));
+            imageView.setUserData(i);
+
+            //register a click listener
+            imageView.setOnMouseClicked(event -> {
+                System.out.println(imageView.getUserData());
+            });
+        }
     }
 }
