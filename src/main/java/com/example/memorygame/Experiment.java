@@ -1,5 +1,7 @@
 package com.example.memorygame;
 
+import java.util.Collections;
+
 public class Experiment {
     public static void main(String[] args) {
         Card aceOfSpades = new Card("Spades","ace");
@@ -12,6 +14,13 @@ public class Experiment {
         System.out.printf("%s value: %d %n",kingOfHearts, kingOfHearts.getValue());
         System.out.printf("%s value: %d %n",twoOfHearts, twoOfHearts.getValue());
 
+        System.out.println("\n  ~~~~ Building a DeckOfCards  ~~~~~");
+        DeckOfCards deck = new DeckOfCards();
+        deck.shuffle();
 
+        for (int i=1; i<=5; i++)
+            System.out.println(deck.dealTopCard());
     }
+
+
 }
