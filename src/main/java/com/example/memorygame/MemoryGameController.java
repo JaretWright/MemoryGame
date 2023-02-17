@@ -1,12 +1,18 @@
 package com.example.memorygame;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -129,5 +135,18 @@ public class MemoryGameController implements Initializable {
         }
         firstCard=null;
         secondCard=null;
+    }
+
+    @FXML
+    void playWar(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("war-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        //get the Stage object from the ActionEvent
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+
+        stage.setTitle("War Game");
+        stage.setScene(scene);
+        stage.show();
     }
 }

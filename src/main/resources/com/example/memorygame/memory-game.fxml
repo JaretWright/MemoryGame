@@ -13,66 +13,75 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane prefHeight="650.0" prefWidth="1000.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.memorygame.MemoryGameController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.memorygame.MemoryGameController">
    <children>
       <VBox layoutX="413.0" layoutY="139.0" prefHeight="650.0" prefWidth="1000.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <FlowPane fx:id="imagesFlowPane" alignment="CENTER" hgap="20.0" vgap="20.0">
                <children>
-                  <ImageView fx:id="imageView" fitHeight="300.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="205.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/3_of_hearts.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="300.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="205.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/3_of_hearts.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="300.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="205.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/3_of_hearts.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="300.0" fitWidth="175.0" layoutX="286.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="205.0" fitWidth="125.0" layoutX="286.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/3_of_hearts.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="300.0" fitWidth="175.0" layoutX="424.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="205.0" fitWidth="125.0" layoutX="424.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/3_of_hearts.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="300.0" fitWidth="175.0" layoutX="562.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="205.0" fitWidth="125.0" layoutX="562.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/3_of_hearts.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="300.0" fitWidth="175.0" layoutX="700.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="205.0" fitWidth="125.0" layoutX="700.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/3_of_hearts.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="300.0" fitWidth="175.0" layoutX="838.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="205.0" fitWidth="125.0" layoutX="838.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/3_of_hearts.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="300.0" fitWidth="175.0" layoutX="10.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="205.0" fitWidth="125.0" layoutX="10.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/3_of_hearts.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="300.0" fitWidth="175.0" layoutX="148.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="205.0" fitWidth="125.0" layoutX="148.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/3_of_hearts.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="205.0" fitWidth="125.0" layoutX="13.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/3_of_hearts.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="205.0" fitWidth="125.0" layoutX="403.0" layoutY="560.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/3_of_hearts.png" />
                      </image>
                   </ImageView>
                </children>
             </FlowPane>
-            <HBox alignment="CENTER" spacing="150.0">
+            <HBox alignment="CENTER" spacing="125.0">
                <children>
                   <GridPane>
                     <columnConstraints>
@@ -90,7 +99,8 @@
                         <Label fx:id="correctGuessesLabel" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
-                  <Button mnemonicParsing="false" onAction="#playAgain" text="Play Again" />
+                  <Button mnemonicParsing="false" onAction="#playAgain" prefWidth="200.0" text="Play Again" />
+                  <Button mnemonicParsing="false" onAction="#playWar" prefWidth="200.0" text="War Game" />
                </children>
             </HBox>
          </children>

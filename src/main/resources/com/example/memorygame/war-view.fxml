@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.memorygame.WarController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="1063.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane layoutX="30.0" layoutY="430.0" prefWidth="200.0">
+               <left>
+                  <Label text="Player 1" BorderPane.alignment="CENTER">
+                     <padding>
+                        <Insets left="60.0" />
+                     </padding>
+                  </Label>
+               </left>
+               <right>
+                  <Label text="Player 2" BorderPane.alignment="CENTER">
+                     <padding>
+                        <Insets right="80.0" />
+                     </padding>
+                  </Label>
+               </right>
+            </BorderPane>
+            <HBox spacing="20.0">
+               <children>
+                  <ImageView fitHeight="286.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/back_of_card.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="player1ImageView" fitHeight="286.0" fitWidth="200.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/3_of_spades.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="player2ImageView" fitHeight="286.0" fitWidth="200.0" layoutX="207.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/3_of_spades.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="286.0" fitWidth="200.0" layoutX="404.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/back_of_card.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <BorderPane prefWidth="200.0">
+               <left>
+                  <Label fx:id="player1Label" text="26 Cards" BorderPane.alignment="CENTER">
+                     <padding>
+                        <Insets left="30.0" />
+                     </padding>
+                  </Label>
+               </left>
+               <right>
+                  <Label fx:id="player2Label" text="26 Cards" BorderPane.alignment="CENTER">
+                     <padding>
+                        <Insets right="40.0" />
+                     </padding>
+                  </Label>
+               </right>
+               <center>
+                  <Label fx:id="warDeckLabel" text="2 Cards" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+            <Button mnemonicParsing="false" onAction="#playNextHand" text="Play Next Hand" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
